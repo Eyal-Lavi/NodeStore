@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs'); %>
+    <div class="container">
+
+        <% products.forEach(val => { %>
+            <div class="card" style="width: 18rem;">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h5 class="card-title"><%=val.name; %></h5>
+                    <p class="card-text">$<%=val.description; %> </p>
+                    <p class="card-text">$<%=val.price; %> </p>
+                    <p class="card-text">$<%=val.discount; %> </p>
+                    <a href="#" class="btn btn-primary">Buy</a>
+                </div>
+            </div>
+            <% }); %>
+
+    </div>
+<%- include('../partials/footer.ejs'); %>
